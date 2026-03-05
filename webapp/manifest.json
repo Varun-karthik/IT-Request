@@ -1,0 +1,167 @@
+{
+  "_version": "1.81.0",
+  "sap.app": {
+    "id": "itrequest",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.20.1",
+      "toolsId": "c47dd4f3-b958-42c5-a4c5-e9f39201b5be"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZIT_REQUEST_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/mainService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.144.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "itrequest.i18n.i18n"
+        }
+      },
+      "RequestModel": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "itrequest.view",
+        "async": true,
+        "viewPath": "itrequest.view"
+      },
+      "routes": [
+        {
+          "name": "Routedashboard",
+          "pattern": ":?query:",
+          "target": [
+            "Targetdashboard"
+          ]
+        },
+        {
+          "name": "create",
+          "pattern": "Create Ticket",
+          "target": [
+            "Target2"
+          ]
+        },
+        {
+          "name": "viewRequests",
+          "pattern": "All Requests",
+          "target": [
+            "Target3"
+          ]
+        },
+        {
+          "pattern": "RequestDetail/:requestId:",
+          "name": "RequestDetail",
+          "target": "Target4"
+        },
+        {
+          "pattern": "Statistics",
+          "name": "StatisticData",
+          "target": "Target5"
+        },
+        {
+          "pattern": "Notifications",
+          "name": "notification",
+          "target": "Target6"
+        }
+      ],
+      "targets": {
+        "Targetdashboard": {
+          "id": "dashboard",
+          "name": "dashboard"
+        },
+        "Target2": {
+          "name": "CreateTicket"
+        },
+        "Target3": {
+          "name": "ViewRequests"
+        },
+        "Target4": {
+          "name": "RequestDetails"
+        },
+        "Target5": {
+          "name": "StatisticsDetails"
+        },
+        "Target6": {
+          "name": "NotificationPage"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "itrequest.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "itrequest"
+  }
+}

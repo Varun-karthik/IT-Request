@@ -1,0 +1,60 @@
+{
+  "requests": [
+    {
+      "id": "REQ-1767",
+      "category": "Software",
+      "priority": "Medium",
+      "status": "Open",
+      "createdOn": "2026-01-02",
+      "description":"Version Update"
+    },
+    {
+      "id": "REQ-1009",
+      "category": "Hardware",
+      "priority": "High",
+      "status": "In Progress",
+      "createdOn": "2024-01-17",
+      "description":"Battery Issue"
+    },
+    {
+      "id": "REQ-1014",
+      "category": "Access",
+      "priority": "High",
+      "status": "Closed",
+      "createdOn": "2024-01-17",
+      "description":"Signing in Issue"
+    },
+    {
+      "id": "REQ-1003",
+      "category": "Network",
+      "priority": "High",
+      "status": "Open",
+      "createdOn": "2024-01-16",
+      "description":"Unable to connect with internet"
+    },
+    {
+      "id": "REQ-1006",
+      "category": "Software",
+      "priority": "High",
+      "status": "Closed",
+      "createdOn": "2024-01-16",
+      "description":"Application not working"
+    },
+    {
+      "id": "REQ-1011",
+      "category": "Hardware",
+      "priority": "Low",
+      "status": "Open",
+      "createdOn": "2024-01-16",
+      "description":"Keys not working"
+    },
+    {
+      "id": "REQ-1001",
+      "category": "Hardware",
+      "priority": "High",
+      "status": "In Progress",
+      "createdOn": "2024-01-15",
+      "description":"Mouse not working properly"
+    }
+  ]
+}
